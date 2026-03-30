@@ -1,0 +1,39 @@
+{
+  "cli": {
+    "version": ">= 16.10.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "env": {
+        "EXPO_ANDROID_USE_ANDROIDX": "true",
+        "EXPO_ANDROID_ENABLE_JETIFIER": "true"
+      },
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "env": {
+        "EXPO_ANDROID_USE_ANDROIDX": "true",
+        "EXPO_ANDROID_ENABLE_JETIFIER": "true"
+      },
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "env": {
+        "EXPO_ANDROID_USE_ANDROIDX": "true",
+        "EXPO_ANDROID_ENABLE_JETIFIER": "true"
+      },
+      "autoIncrement": true,
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

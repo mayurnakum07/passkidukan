@@ -1,0 +1,160 @@
+{
+  "expo": {
+    "name": "Paas Ki Dukaan",
+    "slug": "pass-ki-dukan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/paas-ki-dukaan-icon.png",
+    "scheme": "paaskidukaan",
+    "sdkVersion": "54.0.0",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.paaskidukaan.app",
+      "buildNumber": "1.0.0",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBulvdhv-w6y-tdPIvzaLJuo8RroDU0EBM"
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs access to location to show nearby stores and delivery options.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs access to location to show nearby stores and delivery options.",
+        "NSMicrophoneUsageDescription": "This app needs access to microphone for voice search functionality.",
+        "NSSpeechRecognitionUsageDescription": "This app uses speech recognition to convert your voice to text for search.",
+        "NSCameraUsageDescription": "This app needs access to camera to scan QR codes and take photos of prescriptions.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library to select prescription images."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/paas-ki-dukaan-adaptive-foreground.png",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.paaskidukaan.app",
+      "versionCode": 9,
+      "privacyPolicy": "https://paaskidukaan.com/privacy-policy",
+      "networkSecurityConfig": "./assets/network_security_config.xml",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "paaskidukaan",
+              "host": "*"
+            },
+            {
+              "scheme": "ecomm",
+              "host": "store"
+            },
+            {
+              "scheme": "https",
+              "host": "stores.yourdomain.com",
+              "pathPrefix": "/store"
+            },
+            {
+              "scheme": "https",
+              "host": "ecomm-stores.com",
+              "pathPrefix": "/store"
+            },
+            {
+              "scheme": "https",
+              "host": "qr.ecomm.com",
+              "pathPrefix": "/s"
+            },
+            {
+              "scheme": "https",
+              "host": "marg-api.thelocalsandbox.dev",
+              "pathPrefix": "/dl"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBulvdhv-w6y-tdPIvzaLJuo8RroDU0EBM"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBulvdhv-w6y-tdPIvzaLJuo8RroDU0EBM"
+      }
+    },
+    "extra": {
+      "googleMapsApiKey": "AIzaSyBulvdhv-w6y-tdPIvzaLJuo8RroDU0EBM",
+      "eas": {
+        "projectId": "2f98829a-26b1-49b1-9b40-03e35392c87a"
+      }
+    },
+    "plugins": [
+      "expo-dev-client",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "This app needs access to location to show nearby stores and delivery options."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them.",
+          "cameraPermission": "The app accesses your camera to let you take photos of prescriptions."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "minSdkVersion": 24,
+            "enableProguardInReleaseBuilds": false,
+            "enableShrinkResourcesInReleaseBuilds": false,
+            "packagingOptions": {
+              "pickFirst": [
+                "**/libc++_shared.so",
+                "META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version",
+                "META-INF/*.version"
+              ],
+              "exclude": [
+                "META-INF/DEPENDENCIES",
+                "META-INF/LICENSE",
+                "META-INF/LICENSE.txt",
+                "META-INF/license.txt",
+                "META-INF/NOTICE",
+                "META-INF/NOTICE.txt",
+                "META-INF/notice.txt",
+                "META-INF/ASL2.0"
+              ]
+            },
+            "enableMinifyInReleaseBuilds": false
+          }
+        }
+      ],
+      "expo-font",
+      "./app.plugin.js",
+      "expo-speech-recognition"
+    ],
+    "owner": "mayurnakum"
+  }
+}
