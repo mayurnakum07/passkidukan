@@ -956,7 +956,7 @@ const OrdersScreen = () => {
                       View Details
                     </Text>
                   </TouchableOpacity>
-                  {/* <TouchableOpacity onPress={() => handleReorderPress(order)}>
+                  <TouchableOpacity onPress={() => handleReorderPress(order)}>
                     <Text
                       style={[
                         styles.outlinedButtonText,
@@ -968,7 +968,7 @@ const OrdersScreen = () => {
                     >
                       Reorder
                     </Text>
-                  </TouchableOpacity> */}
+                  </TouchableOpacity>
                 </View>
               </View>
             );

@@ -1821,7 +1821,7 @@ const OrderDetailScreen = () => {
                 />
                 <Text style={styles.callStoreBtnText}>Call Store</Text>
               </TouchableOpacity>
-              {/* <Animated.View
+              <Animated.View
                 style={{
                   flex: 1,
                   marginLeft: 6,
@@ -1857,7 +1857,7 @@ const OrderDetailScreen = () => {
                   />
                   <Text style={styles.reorderBtnText}>Reorder</Text>
                 </TouchableOpacity>
-              </Animated.View> */}
+              </Animated.View>
             </View>
           </LinearGradient>
         </ScrollView>
